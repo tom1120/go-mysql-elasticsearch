@@ -7,6 +7,9 @@ import (
 	"runtime"
 	"syscall"
 
+	"fmt"
+	"path/filepath"
+
 	"github.com/juju/errors"
 	"github.com/siddontang/go-log/log"
 	"github.com/siddontang/go-mysql-elasticsearch/river"
@@ -24,6 +27,13 @@ var execution = flag.String("exec", "", "mysqldump execution path")
 var logLevel = flag.String("log_level", "info", "log level")
 
 func main() {
+
+	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(dir)
+
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	flag.Parse()
 

@@ -7,3 +7,5 @@ require (
 	github.com/siddontang/go-log v0.0.0-20180807004314-8d05993dda07
 	github.com/siddontang/go-mysql v0.0.0-20190303113352-670f74e8daf5
 )
+
+go 1.13

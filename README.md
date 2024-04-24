@@ -146,6 +146,8 @@ type = "t"
 parent = "parent_id"
 ```
 
+7.3以上es不支持parent,使用join，如需要支持，需要修改程序
+
 Note: you should [setup relationship](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-parent-field.html) with creating the mapping manually.
 
 ## Filter fields
@@ -219,3 +221,7 @@ If you like the project and want to buy me a cola, you can through:
 go-mysql-elasticsearch is still in development, and we will try to use it in production later. Any feedback is very welcome.
 
 Email: siddontang@gmail.com
+
+## windows
+set GOOS=windows
+go build -o bin/go-mysql-elasticsearch.exe ./cmd/go-mysql-elasticsearch
